@@ -1,0 +1,1 @@
+console.log("vai tomar no cu carlinhos")
