@@ -1,19 +1,19 @@
 import promptSync from 'prompt-sync';
 const prompt = promptSync();
 
-let n = [];
-let qtde = Number(prompt("Quantos numeros você vai digitar?"));
+const n = Number(prompt("Quantos numeros voce vai digitar? "));
 
-while(true){
-    if(qtde > 10 || qtde <= 0){
-        let qtde = Number(prompt("Numero invalido, coloque um numero entre 1 e 10: "));
-    }
-    else{
-        break;
-    }
+const numeros: number[] = [];
+
+for(let i = 0; i < n; i++){
+    const valor = Number(prompt("Digite um numero: "));
+    numeros.push(valor);
 }
 
-for(let i = 1; i <= qtde; i++){
-    let valor = Number(prompt("Digite um numero: "));
-    n.push(valor)
-}
+console.log("NUMEROS NEGATIVOS:");
+
+numeros.forEach(num => {
+    if (num < 0) {
+        console.log(num);
+    } 
+});
